@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+}
+
+:root { font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif; color: #f8fafc; background: #08152f; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+html { background: #08152f; }
+body { margin: 0; min-width: 320px; }
+button { font: inherit; }
+button:focus-visible { outline: 2px solid #67e8f9; outline-offset: 4px; }
+.font-serif { font-family: "Cormorant Garamond", Georgia, serif; }
+.choice-card { position: relative; overflow: hidden; border: 1px solid rgba(148,163,184,.28); border-radius: 1rem; background: rgba(10,31,63,.72); transition: transform .22s cubic-bezier(.23,1,.32,1), border-color .22s ease, box-shadow .22s ease; }
+.choice-card:hover { transform: translateY(-5px); border-color: rgba(103,232,249,.62); box-shadow: 0 18px 50px rgba(8,145,178,.15); }
+.choice-card:active { transform: scale(.985); }
+.choice-card.featured { border-color: rgba(34,211,238,.72); box-shadow: 0 0 0 1px rgba(34,211,238,.22), 0 15px 55px rgba(8,145,178,.2); }
+.choice-art { display: grid; height: 168px; place-items: center; background: radial-gradient(circle at 50% 45%, rgba(34,211,238,.35), transparent 34%), linear-gradient(135deg, #0b3157, #0b1937 65%); color: #a5f3fc; font-family: Georgia, serif; font-size: 5rem; }
+.tone-amber .choice-art { background: radial-gradient(circle at 50% 45%, rgba(245,158,11,.32), transparent 32%), linear-gradient(135deg, #523817, #0b1937 70%); color: #fcd34d; }
+.tone-violet .choice-art { background: radial-gradient(circle at 50% 45%, rgba(167,139,250,.34), transparent 32%), linear-gradient(135deg, #38265f, #0b1937 70%); color: #c4b5fd; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
